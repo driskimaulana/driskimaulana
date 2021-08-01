@@ -18,7 +18,7 @@ You can see all of my certificate on, [CERTIFICATE](https://drive.google.com/dri
 - 🌱 I’m currently learning FireBase
 - 💬 Ask me about C, Dart, Flutter
 - 📫 How to reach me: maulanadriski@gmail.com
-- ⚡ Fun fact: The funfact about me is that I am not fun person, haha\
+- ⚡ Fun fact: The funfact about me is that I am not fun person, haha
 
 
 ### GITHUB STATISTIC
