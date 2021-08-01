@@ -9,7 +9,7 @@ Here are some ideas to get you started:
 -->
 My name is **D'Riski Maulana**, you can call me iki ^ ^.\
 I am a Computer Sciences Student.\
-I a have huge interest on SoftWare Development, especially on Android.\
+I have huge interest on SoftWare Development, especially on Android.\
 My mastering is on Flutter application.
 You can see all of my certificate on, [CERTIFICATE](https://drive.google.com/drive/folders/1SeMhSpHdYl_tPj0lUn13u5q7RQtVUDV3?usp=sharing)
 
