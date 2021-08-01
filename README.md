@@ -1,9 +1,11 @@
-### Hi there 👋
+### Hi,
 
 <!--
 **driskimaulana/driskimaulana** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
+
+
 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
@@ -14,3 +16,10 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+My name is **D'Riski Maulana**, you can call me iki ^ ^.\
+I am a Computer Sciences Student.\
+I a have huge interest on SoftWare Development, especially on Android.\
+My mastering is on Flutter application.
+You can see all of my certificate on, [CERTIFICATE](https://drive.google.com/drive/folders/1SeMhSpHdYl_tPj0lUn13u5q7RQtVUDV3?usp=sharing)
+
+#### THANK YOU 
