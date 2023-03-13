@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+### Hi,
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!--
+**driskimaulana/driskimaulana** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-## Available Scripts
+Here are some ideas to get you started: 
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...
+-->
+My name is **D'Riski Maulana**, you can call me iki ^ ^.\
+I am a Computer Sciences Student.\
+I have huge interest on Software Development, especially on Android.\
+My mastering is on Flutter application.
+You can see all of my certificate on, [CERTIFICATE](https://drive.google.com/drive/folders/1SeMhSpHdYl_tPj0lUn13u5q7RQtVUDV3?usp=sharing)
 
-In the project directory, you can run:
 
-### `npm start`
+- 🔭 I’m currently working on Flutter Project
+- 🌱 I’m currently learning FireBase
+- 💬 Ask me about C, Dart, Flutter
+- 📫 How to reach me: maulanadriski@gmail.com
+- ⚡ Fun fact: Everything fun for me
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### GITHUB STATISTIC
+<p align="left">
+<a href="https://github.com/driskimaulana">
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=driskimaulana&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=driskimaulana&layout=compact&langs_count=8&theme=algolia"/>
+</a>
+</p>
 
-### `npm test`
+### REACH ME ON
+<p align="center">
+<a href="https://www.linkedin.com/in/driskimaulana/" target="blank"><img align="center" src="https://img.icons8.com/cute-clipart/64/000000/linkedin.png" alt="driskimaulana" height="50" width="50" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://instagram.com/driskimaulana" target="blank"><img align="center" src="https://img.icons8.com/cute-clipart/64/000000/instagram-new.png" alt="driskimaulana" height="50" width="50" /></a>
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### THANK YOU 
