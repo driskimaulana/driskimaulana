@@ -6,7 +6,7 @@ import Github from "./../../../data/images/github_1.png";
 import Linkedin from "./../../../data/images/linkedin_1.png";
 
 
-const NamedSocmed = ( props ) => {
+const NamedSocmed = () => {
 
     const classes = useStyles();
 

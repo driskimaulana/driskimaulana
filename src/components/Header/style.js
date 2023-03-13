@@ -3,6 +3,7 @@ import { makeStyles } from "@mui/styles";
 export default makeStyles(() => ({
     coverImg : {
         width: "100%",
+        objectFit: "cover",
     }, 
     typography: {
         color: "white",
