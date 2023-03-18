@@ -1,3 +1,4 @@
+
 import {Box, Button} from "@mui/material";
 
 import useStyles from "./style";
@@ -7,6 +8,8 @@ import Contact from "./../../../data/images/contactme.png";
 import Portfolio from "./../../../data/images/portfolio.png";
 import Home from "./../../../data/images/home.png";
 import { Typography } from "@mui/material";
+
+import client from "../../../client";
 
 const MenuItem = ( props ) => {
 
@@ -18,7 +21,7 @@ const MenuItem = ( props ) => {
 
     return (
         <button className={classes.button} onClick={handleClick}>
-            <Box className={classes.container} pt="10px" pb="10px" paddingLeft="25px">
+            <Box className={`${classes.container} ${props.activeMenu == props.menuNumber ? classes.containerColor : classes.container}`} pt="10px" pb="10px" paddingLeft="25px">
                 <img src={props.menuIcon} alt={props.menuIcon} />
                 <Typography variant="p" fontWeight="bold" color="primary" fontSize="12px">{props.menuName}</Typography>
             </Box>

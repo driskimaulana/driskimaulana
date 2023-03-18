@@ -1,13 +1,35 @@
-import { Autocomplete, Box, FormControl, Grid, InputLabel, MenuItem, Select, Typography } from "@mui/material";
+import { Autocomplete, Box, CircularProgress, FormControl, Grid, InputLabel, MenuItem, Select, Typography } from "@mui/material";
 import { width } from "@mui/system";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import PortfolioItem from "./PortfolioItem/PortfolioItem";
 
 import useStyles from "./style";
+import client from "../../../client";
 
 const Portfolio = (props) => {
 
     const classes = useStyles();
+
+    const [portfolios, setportfolios] = useState(null);
+
+    // get portfolio data
+    useEffect(() => {
+        client.fetch(
+            `
+            *[_type == "portfolio"]{
+              name,
+              slug,
+              category,
+              description,
+              screenshots
+            }
+            `
+        ).then((data) => {
+            setportfolios(data);
+        }).catch(console.error);
+    
+    }, [])
+    
 
     const categoryList = [
         "Android",
@@ -18,9 +40,19 @@ const Portfolio = (props) => {
 
     const [category, setcategory] = useState("");
 
+    const [filteredPortfolio, setfilteredPortfolio] = useState(null);
+
     const handleSelect = (event) => {
+        if (event.target.value === "All") {
+            setfilteredPortfolio(null);
+            setcategory(event.target.value);
+            return;
+        }
+        const filter = portfolios.filter(item => item.category === event.target.value);
+        setfilteredPortfolio(filter);
         setcategory(event.target.value);
     }
+
 
     return (
         <Grid item xs={12} md={9}>
@@ -41,10 +73,34 @@ const Portfolio = (props) => {
                         <MenuItem value="Game">Game</MenuItem>
                         <MenuItem value="API">API</MenuItem>
                         <MenuItem value="Web Application">Web Application</MenuItem>
+                        <MenuItem value="All">All</MenuItem>
                     </Select>
                 </FormControl>
+                {
+                    portfolios == null 
+                    ? 
+                    <center>
+                        <CircularProgress />
+                    </center>
+                    :
+                    <tbody>
+                    {
+                        
+                        filteredPortfolio == null 
+                            ?
+                            portfolios != null 
+                            &&
+                            portfolios.map((item) => {
+                                return <PortfolioItem changeMenu={props.changeMenu} slug={item.slug} changeSlug={props.changeSlug} portfolio={item}/> 
+                            })
+                            :
+                            filteredPortfolio.map((item) => {
+                                return <PortfolioItem changeMenu={props.changeMenu} slug={item.slug} changeSlug={props.changeSlug} portfolio={item} /> 
+                            })
+                    }
+                    </tbody>            
+                }
 
-                <PortfolioItem changeMenu={props.changeMenu} />
             </Box>
         </Grid>
     )

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { createTheme, Grid, ThemeProvider } from "@mui/material";
 import Header from "./components/Header/Header";
@@ -25,12 +25,15 @@ function App() {
         main: '#323232'
       },
       secondary: {
-        main: '#D9D9D9'
+        main: '#ffffff'
       }
     }
   })
 
-  const [menu, setmenu] = useState(1);
+  const [menu, setmenu] = useState(0);
+
+  const [slug, setslug] = useState("");
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -38,13 +41,13 @@ function App() {
         <Header />
         <main>
           <Grid container spacing={8} sx={{ padding: "40px" }}>
-            <Sidebar changeMenu={setmenu} />
+            <Sidebar changeMenu={setmenu} activeMenu={menu} />
             { menu === 0 && <Home /> }
             { menu === 1 && <Blog /> }
-            { menu === 2 && <Portfolio changeMenu={setmenu} /> }
+            { menu === 2 && <Portfolio changeMenu={setmenu} changeSlug={setslug} /> }
             { menu === 3 && <Certifications /> }
             { menu === 4 && <Contact /> }
-            { menu === 5 && <PortfolioDetails /> }
+            { menu === 5 && <PortfolioDetails slug={slug} /> }
           </Grid>
         </main>
         <footer>

@@ -1,12 +1,32 @@
-import React from "react";
-import { Autocomplete, Box, FormControl, Grid, InputLabel, MenuItem, Select, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { Box, CircularProgress, Grid,  Typography } from "@mui/material";
 
 import useStyles from "./style";
 import CertificationItem from "./CertificationItem/CertificationItem";
+import client from "../../../client";
 
 const Certifications = () => {
 
     const classes = useStyles();
+
+    const [certification, setCertification] = useState(null);
+
+    useEffect(() => {
+      client.fetch(
+        `
+        *[_type == "certifications"]{
+            name,
+            company,
+            date,
+            credentials
+        }
+        `
+      ).then((data) => {
+        setCertification(data);
+      }).catch(console.error);
+     
+    }, [])
+    
 
     return(
         <Grid item xs={12} md={9}>
@@ -14,7 +34,17 @@ const Certifications = () => {
                 <Typography variant="h1" fontWeight="bold" fontSize="48px">
                     Certifications
                 </Typography>
-                <CertificationItem />
+                {
+                    certification == null 
+                    ?
+                    <center>
+                        <CircularProgress />
+                    </center>
+                    :
+                    certification.map((item) => {
+                        return <CertificationItem certification={item} />
+                    })
+                }
             </Box>
         </Grid>
     )

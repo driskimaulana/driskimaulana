@@ -20,5 +20,6 @@ export default makeStyles(() => ({
         height: "195px", 
         alignItems: "center",
         transition: "background-color 2s ease-out 100ms",
+        marginBlock: "20px",
     },
 }))

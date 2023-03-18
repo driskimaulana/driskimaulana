@@ -46,5 +46,6 @@ export default makeStyles(() => ({
         rowGap: "10px",
         justifyContent: "center",
         height: "121px",
+        width: "70px",
     }
 }))

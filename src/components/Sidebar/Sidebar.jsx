@@ -48,11 +48,11 @@ const Sidebar = ( props ) => {
                         Software Engineer | Cloud Computing Student at Bangkit Academy
                     </Typography>
                     <Box className={classes.menuContainer}>
-                        <MenuItem changeMenu={props.changeMenu} menuNumber={0} menuIcon={Home} menuName="Home" />
-                        <MenuItem changeMenu={props.changeMenu} menuNumber={1} menuIcon={Blog} menuName="Blog" />
-                        <MenuItem changeMenu={props.changeMenu} menuNumber={2} menuIcon={Portfolio} menuName="Portfolio" />
-                        <MenuItem changeMenu={props.changeMenu} menuNumber={3} menuIcon={Certifications} menuName="Certifications" />
-                        <MenuItem changeMenu={props.changeMenu} menuNumber={4} menuIcon={Contact} menuName="Contact Me" />
+                        <MenuItem changeMenu={props.changeMenu} menuNumber={0} menuIcon={Home} menuName="Home" activeMenu={props.activeMenu} />
+                        <MenuItem changeMenu={props.changeMenu} menuNumber={1} menuIcon={Blog} menuName="Blog" activeMenu={props.activeMenu} />
+                        <MenuItem changeMenu={props.changeMenu} menuNumber={2} menuIcon={Portfolio} menuName="Portfolio" activeMenu={props.activeMenu} />
+                        <MenuItem changeMenu={props.changeMenu} menuNumber={3} menuIcon={Certifications} menuName="Certifications" activeMenu={props.activeMenu} />
+                        <MenuItem changeMenu={props.changeMenu} menuNumber={4} menuIcon={Contact} menuName="Contact Me" activeMenu={props.activeMenu} />
                     </Box>
                 </Box>
            </aside>

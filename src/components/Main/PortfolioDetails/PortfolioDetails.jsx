@@ -1,12 +1,37 @@
-import React from "react";
-import { Box, Grid, Typography, Link, ImageList, ImageListItem } from "@mui/material";
+import React, {useEffect, useState} from "react";
+import { Box, Grid, Typography, Link, ImageList, ImageListItem, CircularProgress } from "@mui/material";
 
 import useStyles from "./style";
 import ToGithubIcon from "./../../../data/images/togithub.png";
 
-const PortfolioDetails = () => {
+import client from "../../../client";
+
+const PortfolioDetails = ( props ) => {
 
     const classes = useStyles();
+
+    const slug = props.slug;
+
+    const [portfolio, setportfolio] = useState(null);
+
+    useEffect(() => {
+        client.fetch(
+          `
+          *[_type=="portfolio" && slug == "${slug}"]{
+              name,
+              category,
+              description,
+              tools,
+              github,
+              link,
+              screenshots
+            }
+            `
+        ).then((data) => {
+          console.log(data);
+          setportfolio(data[0]);
+        }).catch(console.error);
+      }, [])
 
     const images = [
         "https://www.linkpicture.com/q/1657538476597-1.jpg",
@@ -23,36 +48,46 @@ const PortfolioDetails = () => {
 
     return(
         <Grid item xs={12} md={9}>
-            <Box className={classes.container}>
-                <Typography variant="h1" fontWeight="bold" fontSize="48px">
-                    Covid Info Application
-                </Typography>
-                <Typography variant="p" fontSize="15px">
-                    The application built in Flutter shows the count of COVID cases in different countries. 
-                    The data shown in this application is from RapidAPI.
-                </Typography>
-                <Typography variant="h1" fontWeight="bold" fontSize="48px">
-                    Tools & Technologies
-                </Typography>
-                <Typography variant="p" fontSize="15px">
-                    Flutter
-                </Typography>
-                <Link href="" sx={{ width: "120px" }}>
-                    <img src={ToGithubIcon} alt="to github icon" style={{ width: "120px" }} />
-                </Link>
-                <Typography variant="h1" fontWeight="bold" fontSize="48px">
-                    Screenshots
-                </Typography>
-                <ImageList cols="8">
-                    {
-                        images.map((item) => (
-                            <ImageListItem>
-                                <img src={`${item}`} alt="item" style={{ width: "100px" }}/>
-                            </ImageListItem>
-                        ))
-                    }
-                </ImageList>
-            </Box>
+            {
+                portfolio == null 
+                ?
+                <center>
+                    <CircularProgress />
+                </center>
+                :
+                <Box className={classes.container}>
+                    <Typography variant="h1" fontWeight="bold" fontSize="48px">
+                        { portfolio.name }
+                    </Typography>
+                    <Typography variant="p" fontSize="15px">
+                        { portfolio.description }
+                    </Typography>
+                    <Typography variant="h1" fontWeight="bold" fontSize="48px">
+                        Tools & Technologies
+                    </Typography>
+                    <Typography variant="p" fontSize="15px">
+                        { portfolio.tools }
+                    </Typography>
+                    <Link href={portfolio.github} sx={{ width: "120px" }} target="_blank">
+                        <img src={ToGithubIcon} alt="to github icon" style={{ width: "120px" }} />
+                    </Link>
+                    <Typography variant="h1" fontWeight="bold" fontSize="48px">
+                        Screenshots
+                    </Typography>
+                    <ImageList cols="8">
+                        {
+                            portfolio.screenshots != null 
+                            &&
+                            portfolio.screenshots.map((item) => (
+                                <ImageListItem>
+                                    <img src={`${item}`} alt="item" style={{ width: "auto", height:"300px"}}/>
+                                </ImageListItem>
+                            ))
+                        }
+                    </ImageList>
+                </Box>
+            }
+            
         </Grid>
     )
 }

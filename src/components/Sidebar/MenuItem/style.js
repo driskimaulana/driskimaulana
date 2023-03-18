@@ -9,9 +9,13 @@ export default makeStyles(() => ({
         },
         display: "flex",
         alignItems: "center",
-        backgroundColor: "#D9D9D9",
+        
         borderRadius: "20px",
         columnGap: "20px"
+    },
+
+    containerColor: {
+        backgroundColor: "#949494",
     },
 
     button : {

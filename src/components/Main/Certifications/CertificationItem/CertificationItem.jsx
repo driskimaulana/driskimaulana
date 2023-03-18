@@ -9,24 +9,26 @@ const CertificationItem = ( props ) => {
 
     const classes = useStyles();
 
+    const certification = props.certification;
+
     return(
-        <Link href="" sx={{ textDecoration: "none" }}>
-            <Card className={``} sx={{ borderRadius: "20px" }} >
+        <Link href={ certification.credentials } sx={{ textDecoration: "none" }} target="_blank" >
+            <Card sx={{ borderRadius: "20px" }} >
                 <Box  >
                     <CardContent className={`${classes.container}`}>
                         <Typography variant="h3" fontWeight="bold" fontSize="28px" color="white">
-                            Belajar Dasar Pemrograman JavaScript
+                            { certification.name }
                         </Typography>
                         <Box className={classes.containerDetail}>
                             <img src={CompanyIcon} alt="company icon" />
                             <Typography variant="p" fontSize="10px" color="white">
-                                Dicoding
+                                { certification.company }
                             </Typography>
                         </Box>
                         <Box className={classes.containerDetail}>
                             <img src={CalendarIcon} alt="calendar icon" />
                             <Typography variant="p" fontSize="10px" color="white">
-                                January 2023
+                                { certification.date }
                             </Typography>
                         </Box>
                     </CardContent>
