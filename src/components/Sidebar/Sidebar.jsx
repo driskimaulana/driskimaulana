@@ -24,7 +24,7 @@ const Sidebar = ( props ) => {
            <aside>
                 <Box className={classes.container}  sx={{ padding: "20px" }}>
                     <Avatar src={Driski} alt="D'Riski Maulana" className={classes.avatar} sx={{ width: "150px", height: "150px",}} />
-                    <Typography variant="p" fontWeight="bold" color="secondary" fontSize="24px">
+                    <Typography variant="p" fontWeight="bold" color="secondary" fontSize="24px" textAlign="center">
                         D'Riski Maulana
                     </Typography>
                     <Box className={classes.socmedContainer}>

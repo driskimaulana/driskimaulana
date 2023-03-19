@@ -14,20 +14,20 @@ const NamedSocmed = () => {
         <>
             <Link href="https://medium.com/@driskimaulana" underline="none">
                 <Box className={classes.container} >
-                    <img src={Medium} alt="medium" />
-                    <Typography variant="p" fontSize="14px" color="primary" fontWeight="bold">@driskimaulana</Typography>
+                    <img src={Medium} alt="medium" className={classes.img} />
+                    <Typography variant="p" className={classes.p} >@driskimaulana</Typography>
                 </Box>
             </Link>
             <Link href="https://github.com/driskimaulana" underline="none">
                 <Box className={classes.container} >
-                    <img src={Github} alt="github" />
-                    <Typography variant="p" fontSize="14px" color="primary" fontWeight="bold">@driskimaulana</Typography>
+                    <img src={Github} alt="github" className={classes.img} />
+                    <Typography variant="p" className={classes.p}>@driskimaulana</Typography>
                 </Box>
             </Link>
             <Link href="https://linkedin.com/in/driskimaulana" underline="none">
                 <Box className={classes.container} >
-                    <img src={Linkedin} alt="linkedin" />
-                    <Typography variant="p" fontSize="14px" color="primary" fontWeight="bold">@driskimaulana</Typography>
+                    <img src={Linkedin} alt="linkedin" className={classes.img} />
+                    <Typography variant="p" className={classes.p}>@driskimaulana</Typography>
                 </Box>
             </Link>
         </>

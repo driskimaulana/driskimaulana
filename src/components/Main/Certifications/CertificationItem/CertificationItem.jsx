@@ -13,10 +13,17 @@ const CertificationItem = ( props ) => {
 
     return(
         <Link href={ certification.credentials } sx={{ textDecoration: "none" }} target="_blank" >
-            <Card sx={{ borderRadius: "20px" }} >
+            <Card sx={{ borderRadius: "20px", paddingRight: "20px" }} >
                 <Box  >
                     <CardContent className={`${classes.container}`}>
-                        <Typography variant="h3" fontWeight="bold" fontSize="28px" color="white">
+                        <Typography sx= {{
+                           '@media(max-width: 700px)': {
+                                fontSize: "14px",
+                            },
+                            fontWeight:"bold" ,
+                            fontSize:"28px",
+                            color:"white"
+                        }} variant="h3" >
                             { certification.name }
                         </Typography>
                         <Box className={classes.containerDetail}>

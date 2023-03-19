@@ -19,10 +19,16 @@ const PortfolioItem = ( props ) => {
     return(
         <Card key={portfolio.name} className={`${classes.cardContainer} ${classes.fullCard}`} sx={{ borderRadius: "20px" }} onClick={handleClick} >
             <Box className={`${classes.container} ${classes.fullCard}`} >
-                <CardMedia component="img" sx={{ width: "40%", maxWidth: "200px", backgroundColor: "#949494" }} image={portfolio.screenshots != null ? portfolio.screenshots[0] : "https://cdn-icons-png.flaticon.com/512/3419/3419233.png"} alt="cover portfolio" />
+                <CardMedia component="img" sx={{ width: "40%", maxWidth: "200px", backgroundColor: "#949494", objectFit: "cover", minWidth: "100px" }} image={portfolio.screenshots != null ? portfolio.screenshots[0] : "https://cdn-icons-png.flaticon.com/512/3419/3419233.png"} alt="cover portfolio" />
                 <Divider sx={{ backgroundColor: "#D9D9D9" }} orientation="vertical" />
                 <CardContent sx={{ width: "60%" }}>
-                    <Typography variant="h1" fontSize={24} fontWeight="bold" color="white">
+                    <Typography
+                      sx={{
+                        '@media(max-width: 700px)': {
+                            fontSize: "20px",
+                        },
+                        }}
+                      variant="h1" fontSize={24} fontWeight="bold" color="white">
                         {portfolio.name}
                     </Typography>
                     <Typography variant="p" fontSize={14} color="white">

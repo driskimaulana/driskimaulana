@@ -11,6 +11,7 @@ export default makeStyles(() => ({
     locationMailContainer: {
         display: "flex",
         justifyContent: "space-evenly",
+        rowGap: "10px",
     },
 
     detailContainer: {

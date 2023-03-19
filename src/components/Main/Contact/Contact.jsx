@@ -15,12 +15,12 @@ const Contact = () => {
     return(
         <Grid item xs={12} md={9}>
             <Box className={classes.container}>
-                <Typography variant="h1" fontWeight="bold" fontSize="48px">
+                <Typography sx={{ '@media(max-width: 700px)': { fontSize: "24px", textAlign: 'center' } }} variant="h1" fontWeight="bold" fontSize="48px">
                     Contact Me
                 </Typography>
 
                 <img src={ContactAnim} alt="contact animations" style={{ width: "80%" }} />
-                <Typography variant="p" fontSize="18px">
+                <Typography sx={{ '@media(max-width: 700px)': { fontSize: "12px", textAlign: 'center' } }} variant="p" fontSize="18px">
                     You can get in touch with me via <span><a href="mailto:maulanadriski@gmail.com">email</a></span> or my other social media.
                 </Typography>
 

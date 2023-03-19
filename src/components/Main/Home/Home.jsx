@@ -19,7 +19,11 @@ const Home = () => {
     return(
         <Grid item xs={12} md={9}>
             <Box className={classes.container}>
-                <Typography variant="h1" fontWeight="bold" fontSize="48px">
+                <Typography sx={{
+                    '@media(max-width: 700px)': {
+                        textAlign: "center",
+                    },
+                }}  variant="h1" fontWeight="bold" fontSize="48px">
                     About Me
                 </Typography>
                 <Typography variant="p" fontSize="18px">
@@ -52,7 +56,11 @@ const Home = () => {
                         </Typography>
                     </Box>
                 </Grid>
-                <Typography variant="h1" fontWeight="bold" fontSize="48px">
+                <Typography sx={{
+                    '@media(max-width: 700px)': {
+                        textAlign: "center",
+                    },
+                }} variant="h1" fontWeight="bold" fontSize="48px">
                     Skills
                 </Typography>
                 <Grid container className={classes.skillsContainer}>

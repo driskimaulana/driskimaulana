@@ -31,7 +31,12 @@ const Certifications = () => {
     return(
         <Grid item xs={12} md={9}>
             <Box className={classes.container}>
-                <Typography variant="h1" fontWeight="bold" fontSize="48px">
+                <Typography sx={{
+                    '@media(max-width: 700px)': {
+                        fontSize: "24px",
+                        textAlign: "center",
+                    },
+                }} variant="h1" fontWeight="bold" fontSize="48px">
                     Certifications
                 </Typography>
                 {
