@@ -40,19 +40,16 @@ function App() {
   const [slug, setslug] = useState("");
 
   const [value, setvalue] = useState(0);
-  const ref = useRef(null);
 
   React.useEffect(() => {
-    // ref.current.ownerDocument.body.scrollTop = 0;
     setmenu(value);
-    // setMessages(refreshMessages());
   }, [value, setmenu]);
 
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
         <Header />
-        <main>
+        <main id="main">
           <Grid container spacing={8} sx={{ padding: "40px", justifyContent: "center" }} >
             <Sidebar changeMenu={setmenu} activeMenu={menu} />
             { menu === 0 && <Home /> }
@@ -78,6 +75,7 @@ function App() {
             value={value}
             onChange={(event, newValue) => {
               setvalue(newValue);
+              document.getElementById('main').scrollIntoView()
             }}
             sx={{
               backgroundColor: "#949494"

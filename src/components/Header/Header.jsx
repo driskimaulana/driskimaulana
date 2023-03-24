@@ -1,4 +1,4 @@
-import { Box, Link, Typography, Grid } from "@mui/material";
+import { Box, Link, Typography, Grid, Button } from "@mui/material";
 import HeaderImg from "./../../data/images/header.png";
 import useStyles from './style';
 
@@ -6,7 +6,7 @@ import NamedSocmed from "./MainSocmed/NamedSocmed";
 import TextAnimation from "react-text-animations";
 import MyLogo from "./../../data/images/mylogo.png";
 
-const Header = () => {
+const Header = ( props ) => {
 
     const classes = useStyles();
 
