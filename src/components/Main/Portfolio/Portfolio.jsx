@@ -96,11 +96,11 @@ const Portfolio = (props) => {
                             portfolios != null 
                             &&
                             portfolios.map((item) => {
-                                return <PortfolioItem changeMenu={props.changeMenu} slug={item.slug} changeSlug={props.changeSlug} portfolio={item}/> 
+                                return <PortfolioItem changeValue={props.changeValue} changeMenu={props.changeMenu} slug={item.slug} changeSlug={props.changeSlug} portfolio={item}/> 
                             })
                             :
                             filteredPortfolio.map((item) => {
-                                return <PortfolioItem changeMenu={props.changeMenu} slug={item.slug} changeSlug={props.changeSlug} portfolio={item} /> 
+                                return <PortfolioItem changeValue={props.changeValue} changeMenu={props.changeMenu} slug={item.slug} changeSlug={props.changeSlug} portfolio={item} /> 
                             })
                     }
                     </tbody>            

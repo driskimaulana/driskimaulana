@@ -54,7 +54,7 @@ function App() {
             <Sidebar changeMenu={setmenu} activeMenu={menu} />
             { menu === 0 && <Home /> }
             { menu === 1 && <Blog /> }
-            { menu === 2 && <Portfolio changeMenu={setmenu} changeSlug={setslug} /> }
+            { menu === 2 && <Portfolio changeValue={setvalue} changeMenu={setmenu} changeSlug={setslug} /> }
             { menu === 3 && <Certifications /> }
             { menu === 4 && <Contact /> }
             { menu === 5 && <PortfolioDetails slug={slug} /> }

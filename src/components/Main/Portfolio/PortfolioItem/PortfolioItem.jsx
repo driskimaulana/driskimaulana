@@ -11,7 +11,8 @@ const PortfolioItem = ( props ) => {
 
     const handleClick = () => {
         props.changeMenu(5);
-        props.changeSlug(props.slug)
+        props.changeSlug(props.slug);
+        props.changeValue(5);
     }
 
     const portfolio = props.portfolio;
