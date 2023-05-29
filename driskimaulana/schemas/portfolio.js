@@ -39,6 +39,29 @@ export default {
             title: 'Link'
         },
         {
+            name: 'urls',
+            type: 'array',
+            title: 'Urls',
+            of: [
+                {
+                    type: 'object',
+                    title: 'URL Object',
+                    name: 'urlObject',
+                    fields: [
+                        {
+                            title: 'URL Title',
+                            name: 'title',
+                            type: 'string',
+                        },{
+                            title: 'URL Value',
+                            name: 'value',
+                            type: 'string',
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             name: 'screenshots',
             type: 'array',
             title: 'Screenshots',

@@ -24,7 +24,8 @@ const PortfolioDetails = ( props ) => {
               tools,
               github,
               link,
-              screenshots
+              screenshots,
+              urls
             }
             `
         ).then((data) => {
@@ -33,18 +34,7 @@ const PortfolioDetails = ( props ) => {
         }).catch(console.error);
       }, [])
 
-    const images = [
-        "https://www.linkpicture.com/q/1657538476597-1.jpg",
-        "https://www.linkpicture.com/q/1657538476597-1.jpg",
-        "https://www.linkpicture.com/q/1657538476597-1.jpg",
-        "https://www.linkpicture.com/q/1657538476597-1.jpg",
-        "https://www.linkpicture.com/q/1657538476597-1.jpg",
-        "https://www.linkpicture.com/q/1657538476597-1.jpg",
-        "https://www.linkpicture.com/q/1657538476597-1.jpg",
-        "https://www.linkpicture.com/q/1657538476597-1.jpg",
-        "https://www.linkpicture.com/q/1657538476597-1.jpg",
-        "https://www.linkpicture.com/q/1657538476597-1.jpg",
-    ];
+
 
     return(
         <Grid item xs={12} md={9}>
@@ -71,6 +61,18 @@ const PortfolioDetails = ( props ) => {
                     <Link href={portfolio.github} sx={{ width: "120px" }} target="_blank">
                         <img src={ToGithubIcon} alt="to github icon" style={{ width: "120px" }} />
                     </Link>
+                    {
+                        portfolio.hasOwnProperty('urls') && <Typography variant="h1" fontWeight="bold" fontSize="48px">
+                        URLs
+                    </Typography>
+                    }
+                    {
+                        portfolio.hasOwnProperty('urls') && portfolio.urls.map((e) => (
+                            <Link href={e.title} >
+                                <Typography variant="p">{e.value}</Typography>
+                            </Link>
+                        ))
+                    }
                     <Typography variant="h1" fontWeight="bold" fontSize="48px">
                         Screenshots
                     </Typography>

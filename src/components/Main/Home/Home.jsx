@@ -3,7 +3,8 @@ import { Box, Button, Grid, Typography } from "@mui/material"
 import useStyles from "./style";
 import LocationIcon from "./../../../data/images/location.png";
 import MailIcon from "./../../../data/images/mail.png";
-import CV from "./../../../data/cv/driskimaulanaCV.pdf";
+// import CV from "./../../../data/cv/driskimaulanaCV.pdf";
+import CV from "./../../../data/cv/gameprogcv.pdf";
 
 import Android from "./../../../data/images/android.png";
 import Express from "./../../../data/images/express.png";
@@ -27,9 +28,8 @@ const Home = () => {
                     About Me
                 </Typography>
                 <Typography variant="p" fontSize="18px">
-                    I am a Computer Science student who works in software engineering. 
-                    I have experience in developing APIs as a backend for both mobile and web platforms. 
-                    I am comfortable being a leader of a development team, but I can also be a good follower.
+                I am a dedicated and driven individual actively seeking a software engineer intern position. With a passion for technology and a strong desire to contribute to innovative projects, 
+                I brings a solid foundation in computer science and a thirst for continuous learning.
                 </Typography>
                 <Grid container className={classes.locationMailContainer}>
                     <a href={CV} download="CV-D'RiskiMaulana">
