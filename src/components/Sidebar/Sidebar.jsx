@@ -20,7 +20,10 @@ const Sidebar = ( props ) => {
     const classes = useStyle();
 
     return(
-        <Grid item xs={10} md={3}>
+        <Box sx={{
+            marginInline: "20px",
+            marginBlock: "20px"
+        }} item xs={10} md={3}>
            <aside>
                 <Box className={classes.container}  sx={{ padding: "20px" }}>
                     <Avatar src={Driski} alt="D'Riski Maulana" className={classes.avatar} sx={{ width: "150px", height: "150px",}} />
@@ -48,16 +51,16 @@ const Sidebar = ( props ) => {
                         Software Engineer | Cloud Computing Student at Bangkit Academy
                     </Typography>
                     <Box className={classes.menuContainer}>
-                        <MenuItem changeMenu={props.changeMenu} menuNumber={0} menuIcon={Home} menuName="Home" activeMenu={props.activeMenu} />
-                        <MenuItem changeMenu={props.changeMenu} menuNumber={1} menuIcon={Blog} menuName="Blog" activeMenu={props.activeMenu} />
-                        <MenuItem changeMenu={props.changeMenu} menuNumber={2} menuIcon={Portfolio} menuName="Portfolio" activeMenu={props.activeMenu} />
-                        <MenuItem changeMenu={props.changeMenu} menuNumber={3} menuIcon={Certifications} menuName="Certifications" activeMenu={props.activeMenu} />
-                        <MenuItem changeMenu={props.changeMenu} menuNumber={4} menuIcon={Contact} menuName="Contact Me" activeMenu={props.activeMenu} />
+                        <MenuItem changeMenu={props.changeMenu} routes="home" menuNumber={0} menuIcon={Home} menuName="Home" activeMenu={props.activeMenu} />
+                        <MenuItem changeMenu={props.changeMenu} routes="blogs" menuNumber={1} menuIcon={Blog} menuName="Blog" activeMenu={props.activeMenu} />
+                        <MenuItem changeMenu={props.changeMenu} routes="portofolios" menuNumber={2} menuIcon={Portfolio} menuName="Portfolio" activeMenu={props.activeMenu} />
+                        <MenuItem changeMenu={props.changeMenu} routes="certifications" menuNumber={3} menuIcon={Certifications} menuName="Certifications" activeMenu={props.activeMenu} />
+                        <MenuItem changeMenu={props.changeMenu} routes="contact" menuNumber={4} menuIcon={Contact} menuName="Contact Me" activeMenu={props.activeMenu} />
                     </Box>
                 </Box>
            </aside>
 
-        </Grid>
+        </Box>
     );
 }
 

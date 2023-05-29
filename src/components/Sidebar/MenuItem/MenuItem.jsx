@@ -16,11 +16,12 @@ const MenuItem = ( props ) => {
     const classes = useStyles();
 
     const handleClick = () => {
-        props.changeMenu(props.menuNumber);
+        // props.changeMenu(props.menuNumber);
+        window.location.href = props.routes;
     }
 
     return (
-        <button className={classes.button} onClick={handleClick}>
+        <button className={classes.button} onClick={handleClick} href={props.routes}>
             <Box className={`${classes.container} ${props.activeMenu == props.menuNumber ? classes.containerColor : classes.container}`} pt="10px" pb="10px" paddingLeft="25px">
                 <img src={props.menuIcon} alt={props.menuIcon} />
                 <Typography variant="p" fontWeight="bold" color="primary" fontSize="12px">{props.menuName}</Typography>

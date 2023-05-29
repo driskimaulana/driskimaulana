@@ -15,6 +15,9 @@ import FeedIcon from '@mui/icons-material/Feed';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import ContactSupportIcon from '@mui/icons-material/ContactSupport';
+import { BrowserRouter } from "react-router-dom";
+import { ProSidebarProvider } from "react-pro-sidebar";
+import Router from "./routes/routes";
 
 function App() {
 
@@ -48,7 +51,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Header />
+        {/* <Header />
         <main id="main">
           <Grid container spacing={8} sx={{ padding: "40px", justifyContent: "center" }} >
             <Sidebar changeMenu={setmenu} activeMenu={menu} />
@@ -62,7 +65,13 @@ function App() {
         </main>
         <footer>
           <Footer />
-        </footer>
+        </footer> */}
+        
+        <BrowserRouter>
+          <ProSidebarProvider>
+            <Router />
+          </ProSidebarProvider>
+        </BrowserRouter>
         <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, 
 
           '@media(min-width:500px)': {
@@ -74,7 +83,29 @@ function App() {
             showLabels
             value={value}
             onChange={(event, newValue) => {
-              setvalue(newValue);
+              // setvalue(newValue);
+              if (newValue === 0) {
+                window.location.href = "/home"
+              } 
+              else if (newValue === 1) {
+                window.location.href = "/blogs"
+              }
+              else if (newValue === 2) {
+                window.location.href = "/portfolios"
+                
+              }
+              else if (newValue === 3) {
+                window.location.href = "/certifications"
+                
+              }
+              else if (newValue === 4) {
+                window.location.href = "/contact"
+                
+              }
+              else if (newValue === 1) {
+                window.location.href = "/blogs"
+                
+              }
               document.getElementById('main').scrollIntoView()
             }}
             sx={{
