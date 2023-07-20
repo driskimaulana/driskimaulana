@@ -4,7 +4,7 @@ import useStyles from "./style";
 import LocationIcon from "./../../../data/images/location.png";
 import MailIcon from "./../../../data/images/mail.png";
 // import CV from "./../../../data/cv/driskimaulanaCV.pdf";
-import CV from "./../../../data/cv/gameprogcv.pdf";
+import CV from "./../../../data/cv/cv.pdf";
 
 import Android from "./../../../data/images/android.png";
 import Express from "./../../../data/images/express.png";
