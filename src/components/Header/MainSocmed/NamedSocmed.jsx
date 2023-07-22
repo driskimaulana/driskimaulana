@@ -12,19 +12,19 @@ const NamedSocmed = () => {
 
     return (
         <>
-            <Link href="https://medium.com/@driskimaulana" underline="none">
+            <Link href="https://medium.com/@driskimaulana" target="_blank" underline="none">
                 <Box className={classes.container} >
                     <img src={Medium} alt="medium" className={classes.img} />
                     <Typography variant="p" className={classes.p} >@driskimaulana</Typography>
                 </Box>
             </Link>
-            <Link href="https://github.com/driskimaulana" underline="none">
+            <Link href="https://github.com/driskimaulana" target="_blank" underline="none">
                 <Box className={classes.container} >
                     <img src={Github} alt="github" className={classes.img} />
                     <Typography variant="p" className={classes.p}>@driskimaulana</Typography>
                 </Box>
             </Link>
-            <Link href="https://linkedin.com/in/driskimaulana" underline="none">
+            <Link href="https://linkedin.com/in/driskimaulana" target="_blank" underline="none">
                 <Box className={classes.container} >
                     <img src={Linkedin} alt="linkedin" className={classes.img} />
                     <Typography variant="p" className={classes.p}>@driskimaulana</Typography>

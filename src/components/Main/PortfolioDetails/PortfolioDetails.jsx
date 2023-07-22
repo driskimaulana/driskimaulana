@@ -5,12 +5,16 @@ import useStyles from "./style";
 import ToGithubIcon from "./../../../data/images/togithub.png";
 
 import client from "../../../client";
+import Sidebar from "../../Sidebar/Sidebar";
 
 const PortfolioDetails = ( props ) => {
 
     const classes = useStyles();
 
-    const slug = props.slug;
+    // const slug = props.slug;
+    const slug = window.location.pathname.split("/").pop();
+
+    // console.log(slug2);
 
     const [portfolio, setportfolio] = useState(null);
 
@@ -37,60 +41,65 @@ const PortfolioDetails = ( props ) => {
 
 
     return(
-        <Grid item xs={12} md={9}>
-            {
-                portfolio == null 
-                ?
-                <center>
-                    <CircularProgress />
-                </center>
-                :
-                <Box className={classes.container}>
-                    <Typography variant="h1" fontWeight="bold" fontSize="48px">
-                        { portfolio.name }
-                    </Typography>
-                    <Typography variant="p" fontSize="15px">
-                        { portfolio.description }
-                    </Typography>
-                    <Typography variant="h1" fontWeight="bold" fontSize="48px">
-                        Tools & Technologies
-                    </Typography>
-                    <Typography variant="p" fontSize="15px">
-                        { portfolio.tools }
-                    </Typography>
-                    <Link href={portfolio.github} sx={{ width: "120px" }} target="_blank">
-                        <img src={ToGithubIcon} alt="to github icon" style={{ width: "120px" }} />
-                    </Link>
-                    {
-                        portfolio.hasOwnProperty('urls') && <Typography variant="h1" fontWeight="bold" fontSize="48px">
-                        URLs
-                    </Typography>
-                    }
-                    {
-                        portfolio.hasOwnProperty('urls') && portfolio.urls.map((e) => (
-                            <Link href={e.title} >
-                                <Typography variant="p">{e.value}</Typography>
-                            </Link>
-                        ))
-                    }
-                    <Typography variant="h1" fontWeight="bold" fontSize="48px">
-                        Screenshots
-                    </Typography>
-                    <ImageList cols="8">
+            
+            <Grid item xs={12} md={9}>
+                {
+                    portfolio == null 
+                    ?
+                    <center>
+                        <CircularProgress />
+                    </center>
+                    :
+                    <Box className={classes.container}>
+                        <Typography variant="h1" fontWeight="bold" fontSize="48px">
+                            { portfolio.name }
+                        </Typography>
+                        <Typography variant="p" fontSize="15px">
+                            { portfolio.description }
+                        </Typography>
+                        <Link href={portfolio.github} sx={{ width: "120px" }} target="_blank">
+                            <img src={ToGithubIcon} alt="to github icon" style={{ width: "120px" }} />
+                        </Link>
+                        <Typography variant="h1" fontWeight="bold" fontSize="48px">
+                            Tools & Technologies
+                        </Typography>
+                        <Typography variant="p" fontSize="15px">
+                            { portfolio.tools }
+                        </Typography>
                         {
-                            portfolio.screenshots != null 
-                            &&
-                            portfolio.screenshots.map((item) => (
-                                <ImageListItem>
-                                    <img src={`${item}`} alt="item" style={{ width: "auto", height:"300px"}}/>
-                                </ImageListItem>
+                            portfolio.hasOwnProperty('urls') && <Typography variant="h1" fontWeight="bold" fontSize="48px">
+                            URLs
+                        </Typography>
+                        }
+                        {
+                            portfolio.hasOwnProperty('urls') && portfolio.urls.map((e) => (
+                                <Link href={e.value} >
+                                    <Typography variant="p">{e.title}</Typography>
+                                </Link>
                             ))
                         }
-                    </ImageList>
-                </Box>
-            }
-            
-        </Grid>
+
+                        <Typography variant="h1" fontWeight="bold" fontSize="48px">
+                            Screenshots
+                        </Typography>
+                        <ImageList cols="8">
+                            {
+                                portfolio.screenshots != null 
+                                &&
+                                portfolio.screenshots.map((item) => (
+                                    <ImageListItem>
+                                        <img src={`${item}`} alt="item" style={{ width: "auto", height:"300px"}}/>
+                                    </ImageListItem>
+                                ))
+                            }
+                        </ImageList>
+                        {
+                            portfolio.link && <iframe width="620" height="315" src={portfolio.link}></iframe>
+                        }
+                    </Box>
+                }
+                
+            </Grid>
     )
 }
 

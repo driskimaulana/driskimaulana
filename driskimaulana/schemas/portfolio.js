@@ -72,5 +72,10 @@ export default {
                 }
             ]
         },
+        {
+            name: 'video',
+            type: 'string',
+            title: 'Video',
+        }
     ]
 }

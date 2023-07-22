@@ -9,13 +9,16 @@ const PortfolioItem = ( props ) => {
 
     const classes = useStyles();
 
-    const handleClick = () => {
-        props.changeMenu(5);
-        props.changeSlug(props.slug);
-        props.changeValue(5);
+    const portfolio = props.portfolio;
+    const handleClick = ( ) => {
+        // window.location.href = `portfolio/${portfolio.slug}`
+        const href = window.location.href.split('/');
+        window.open(`${href[0]}/portfolio/${portfolio.slug}`)
+        // props.changeMenu(5);
+        // props.changeSlug(props.slug);
+        // props.changeValue(5);
     }
 
-    const portfolio = props.portfolio;
 
     return(
         <Card key={portfolio.name} className={`${classes.cardContainer} ${classes.fullCard}`} sx={{ borderRadius: "20px" }} onClick={handleClick} >
