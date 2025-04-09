@@ -7,19 +7,8 @@ Here are some ideas to get you started:
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
 -->
-My name is **D'Riski Maulana**, you can call me iki ^ ^.\
-I am a Computer Sciences Student.\
-I have huge interest on Software Development, especially on Android.\
-My mastering is on Flutter application.
-You can see all of my certificate on, [CERTIFICATE](https://drive.google.com/drive/folders/1SeMhSpHdYl_tPj0lUn13u5q7RQtVUDV3?usp=sharing)
 
-
-- 🔭 I’m currently working on Flutter Project
-- 🌱 I’m currently learning FireBase
-- 💬 Ask me about C, Dart, Flutter
-- 📫 How to reach me: maulanadriski@gmail.com
-- ⚡ Fun fact: Everything fun for me
-
+## Yo
 
 ### GITHUB STATISTIC
 <p align="left">
